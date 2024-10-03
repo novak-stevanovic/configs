@@ -1,0 +1,28 @@
+return {
+   -- "nvim-lualine/lualine.nvim",
+   -- dependencies = { "nvim-tree/nvim-web-devicons" },
+   -- options = {
+   --     theme = 'nightfly',
+   --     section_separators = '',
+   --     component_separators = '',
+   --     globalstatus = true
+   -- },
+   -- sections = {
+   --     lualine_a = {'mode'},
+   --     lualine_b = {'diff', 'diagnostics'},
+   --     lualine_c = {
+   --         {
+   --             'filename',
+   --             symbols = {
+   --                 readonly = '',
+   --             },
+   --         },
+   --     },
+   --     lualine_x = {'filetype'},
+   --     lualine_y = {'progress'},
+   --     lualine_z = {'location'}
+   -- },
+   -- config = function(options, sections)
+   --     require("lualine").setup(options, sections)
+   -- end
+}

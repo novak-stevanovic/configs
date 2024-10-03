@@ -1,0 +1,58 @@
+return { }
+-- return { 
+--     "nvim-treesitter/nvim-treesitter",
+--     opts = {
+--         highlight = { enable = true },
+--         ensure_installed = { "c", "lua", "vim", "cpp", "query", "markdown", "markdown_inline", "java" },
+--         additional_vim_regex_highlighting = false,
+--     },
+--     config = function(opts)
+--         require("nvim-treesitter.configs").setup(opts)
+--     end
+-- }
+--
+--
+--
+--
+--
+--
+--
+--
+-- return {
+--     "nvim-treesitter/nvim-treesitter",
+--     opts = {
+--         highlight = {
+--             enable = true,
+--             disable = { "css" }
+--         },
+--         auto_install = true,
+--
+--         incremental_selection = {
+--             enable = true,
+--
+--             keymaps = {
+--                 init_selection = "<Leader>ss",
+--                 node_incremental = "<Leader>si",
+--                 scope_incremental = "<Leader>sc",
+--                 node_decremental = "<Leader>sd",
+--             },
+--         },
+--
+--         additional_vim_regex_highlighting = false,
+--
+--         indent = {
+--             enable = true
+--         },
+--
+--     },
+--     config = function(_, opts)
+--         require("nvim-treesitter.configs").setup(opts)
+--
+--         local map_opts = { noremap = true, silent = true }
+--         local map = vim.api.nvim_set_keymap
+--
+--         map("n", "<Leader>th", ":TSBufToggle highlight<CR>", map_opts)
+--         map("n", "<Leader>ti", ":TSBufToggle indent<CR>", map_opts)
+--     end,
+-- }
+--
