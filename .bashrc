@@ -128,6 +128,7 @@ alias cpjava="cp ~/scripts/javascripts/JavaCompiler.sh ."
 alias c="clear"
 alias cpwd="pwd | xsel --clipboard --input"
 alias rm="trash"
+alias vimfzf="vim \$(fzf)"
 set -o vi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

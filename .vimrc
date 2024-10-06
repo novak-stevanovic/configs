@@ -1,3 +1,4 @@
+set expandtab
 set ts=4 sw=4 
 set nu rnu
 set wildmenu
@@ -23,5 +24,14 @@ nnoremap <C-c> <Esc>
 vnoremap <C-c> <Esc>
 inoremap <C-c> <Esc>
 
-nnoremap : :<C-f>i
-vnoremap : :<C-f>i
+nnoremap <C-f> :<C-f>cc
+vnoremap <C-f> :<C-f>cc
+
+nnoremap <Space>t :term ++curwin<CR>
+vnoremap <Space>t :term ++curwin<CR>
+
+nnoremap n nzz
+vnoremap N Nzz
+
+tnoremap <C-t> <C-w>N
+
