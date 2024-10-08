@@ -69,6 +69,8 @@ vnoremap gvf "ay:vsplit <C-r>a<CR><C-w>l<C-w>H<C-w>h
 vnoremap gsf "ay:split <C-r>a<CR><c-w>j<C-w>K<C-w>k
 vnoremap gtf "ay:tabnew <C-r>a<CR>
 
+nnoremap <C-q> <C-w>q
+
 vnoremap < <gv
 vnoremap > >gv
 
