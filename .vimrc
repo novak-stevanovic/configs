@@ -14,6 +14,7 @@ set wildmode=list:longest
 set nowrap
 set hlsearch
 set fillchars=eob:\ 
+set autoshelldir
 
 nnoremap <Space>h :nohl<CR>
 vnoremap <Space>h :nohl<CR>
@@ -97,3 +98,4 @@ nnoremap gcu _x
 
 vnoremap gcc :norm I
 vnoremap gcu :norm _x<CR>gv
+

@@ -136,3 +136,10 @@ export DOTNET_ROOT=$HOME/.dotnet
 export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+if [[ -n "$VIM_TERMINAL" ]]; then
+    PROMPT_COMMAND='_vim_sync_PWD'
+    function _vim_sync_PWD() {
+    printf '\033]7;file://%s\033\\' "$PWD"
+    }
+fi
