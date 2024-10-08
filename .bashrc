@@ -128,7 +128,11 @@ alias cpjava="cp ~/scripts/javascripts/JavaCompiler.sh ."
 alias c="clear"
 alias cpwd="pwd | xsel --clipboard --input"
 alias rm="trash"
-alias vimfzf="vim \$(fzf)"
+alias fvim="vim \$(fzf)"
+alias tvim="vim -c 'terminal ++curwin'"
 set -o vi
+
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -1,0 +1,8 @@
+echo "export PATH=\"$HOME/bin:\$PATH\"" >> "$HOME/.bashrc"
+
+export IGNOREEOF=2
+alias c="clear"
+set -o vi
+
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
