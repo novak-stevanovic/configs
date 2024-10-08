@@ -97,4 +97,4 @@ nnoremap gcc :norm I
 nnoremap gcu :norm _x<CR>
 
 vnoremap gcc :norm I
-noremap gcu :norm _xgv<CR>
+vnoremap gcu :norm _xgv<CR>
