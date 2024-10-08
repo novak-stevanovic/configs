@@ -91,7 +91,105 @@ vnoremap <C-j> gT
 nnoremap <Space>t :tabnew<CR>
 vnoremap <Space>t :tabnew<CR>
 
-nnoremap gcu 0v
+nnoremap gcc :norm I
+nnoremap gcu :norm _x<CR>
+
+vnoremap gcc :norm I
+vnoremap gcu :norm _xgv<CR>
+if exists('$VIMRUNNING') && ! has('gui_running')
+    qall!
+else
+    let $VIMRUNNING = 1
+endif
+
+set expandtab
+set ts=4 sw=4 
+set nu rnu
+set wildmenu
+set path=**
+set autoindent
+set wildmode=list:longest
+set nowrap
+set hlsearch
+set fillchars=eob:\ 
+
+nnoremap <Space>h :nohl<CR>
+vnoremap <Space>h :nohl<CR>
+
+augroup Mkdir
+  autocmd!
+  autocmd BufWritePre * call mkdir(expand("<afile>:p:h"), "p")
+augroup END
+
+nnoremap <C-c> <Esc>
+vnoremap <C-c> <Esc>
+inoremap <C-c> <Esc>
+
+nnoremap <C-f> :<C-f>cc
+vnoremap <C-f> :<C-f>cc
+
+nnoremap n nzz
+vnoremap N Nzz
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
+nnoremap <C-t> :term ++curwin<CR>
+vnoremap <C-t> :term ++curwin<CR>
+nnoremap <Space>g ggVG
+
+tnoremap <C-t> <C-w>N
+
+"function! CheckBuftypeAndExecuteGF()
+"    if &buftype ==# 'terminal'
+"        exec "normal! \<c-w>vgf\<c-w>l\<c-w>H\<c-w>l"
+"    else
+"        normal! gf
+"    endif
+"endfunction
+
+"nnoremap gf :call CheckBuftypeAndExecuteGF()<CR>
+
+"function! CheckBuftypeAndExecuteGNF()
+    "if &buftype ==# 'terminal'
+        "exec "normal! \<c-w>vgf\<c-w>l\<c-w>H\<c-w>l"
+    "else
+        "normal! gf
+    "endif
+"endfunction
+
+nnoremap gvf <C-w>vgf<C-w>l<C-w>H<C-w>l
+nnoremap gsf <C-w>sgf<C-w>j<C-w>K<C-w>j
+nnoremap gtf <C-w>gf
+
+vnoremap gvf "ay:vsplit <C-r>a<CR><C-w>l<C-w>H<C-w>h
+vnoremap gsf "ay:split <C-r>a<CR><c-w>j<C-w>K<C-w>k
+vnoremap gtf "ay:tabnew <C-r>a<CR>
+
+nnoremap <C-q> <C-w>q
+
+vnoremap < <gv
+vnoremap > >gv
+
+nnoremap <S-UP> :split<CR>
+nnoremap <S-DOWN> :split<CR><C-W><DOWN>
+nnoremap <S-LEFT> :vsplit<CR>
+nnoremap <S-RIGHT> :vsplit<CR><C-W><RIGHT>
+
+inoremap <C-j> <C-n>
+inoremap <C-k> <C-p>
+inoremap <C-f> <C-x><C-f>
+inoremap <C-g> a<BS><C-x><C-f>
+
+nnoremap <C-k> gt
+vnoremap <C-k> gt
+
+nnoremap <C-j> gT
+vnoremap <C-j> gT
+
+nnoremap <Space>t :tabnew<CR>
+vnoremap <Space>t :tabnew<CR>
+
+nnoremap gcu _v
 
 vnoremap gcc <C-v>I
-vnoremap gcu 0<C-v>
+vnoremap gcu _<C-v>
