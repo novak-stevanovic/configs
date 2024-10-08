@@ -35,8 +35,6 @@ vnoremap <C-f> :<C-f>cc
 
 nnoremap n nzz
 vnoremap N Nzz
-nnoremap <C-d> <C-d>zz
-nnoremap <C-u> <C-u>zz
 
 nnoremap <C-t> :term ++curwin<CR>
 vnoremap <C-t> :term ++curwin<CR>
@@ -85,11 +83,14 @@ inoremap <C-k> <C-p>
 inoremap <C-f> <C-x><C-f>
 inoremap <C-g> a<BS><C-x><C-f>
 
-nnoremap <C-k> gt
-vnoremap <C-k> gt
+nnoremap <C-l> gt
+vnoremap <C-l> gt
 
-nnoremap <C-j> gT
-vnoremap <C-j> gT
+nnoremap <C-h> gT
+vnoremap <C-h> gT
+
+nnoremap gt gg
+nnoremap gT gg
 
 nnoremap <Space>t :tabnew<CR>
 vnoremap <Space>t :tabnew<CR>
@@ -98,4 +99,3 @@ nnoremap gcu _x
 
 vnoremap gcc :norm I
 vnoremap gcu :norm _x<CR>gv
-
