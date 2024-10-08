@@ -121,8 +121,6 @@ augroup Mkdir
   autocmd BufWritePre * call mkdir(expand("<afile>:p:h"), "p")
 augroup END
 
-colorscheme sorbet
-
 nnoremap <C-c> <Esc>
 vnoremap <C-c> <Esc>
 inoremap <C-c> <Esc>
