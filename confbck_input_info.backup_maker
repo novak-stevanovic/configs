@@ -1,0 +1,14 @@
+/home/novak/.vimrc
+/home/novak/.bashrc
+/home/novak/.config/nvim/init.lua
+/home/novak/.config/nvim/lua/
+/home/novak/.config/nvim/my-snippets/
+/home/novak/.tmux.conf 
+/home/novak/.config/Code/User/settings.json 
+/home/novak/code/scripts/install/vimrc_lines.txt
+/home/novak/code/scripts/install/bashrc_lines.txt
+/home/novak/code/configs/confbck_input_info.backup_maker
+/home/novak/code/configs/confbck_output_info.backup_maker
+/home/novak/backups/genbck_input_info_file.backup_maker
+/home/novak/backups/genbck_output_info_file.backup_maker 
+
