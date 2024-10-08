@@ -46,10 +46,8 @@ tnoremap <C-t> <C-w>N
 function! CheckBuftypeAndExecuteGFInTerminal()
     if &buftype ==# 'terminal'
         exec "normal! \<c-w>vgf\<c-w>l\<c-w>H\<c-w>l"
-        echo "1"
     else
         normal! gf
-        echo "2"
     endif
 endfunction
 
