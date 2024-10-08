@@ -93,7 +93,7 @@ vnoremap <C-j> gT
 nnoremap <Space>t :tabnew<CR>
 vnoremap <Space>t :tabnew<CR>
 
-nnoremap gcu 0v
+nnoremap gcu _x
 
-vnoremap gcc <C-v>I
-vnoremap gcu 0<C-v>
+vnoremap gcc :norm I
+vnoremap gcu :norm _x<CR>gv
