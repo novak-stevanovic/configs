@@ -41,17 +41,33 @@ nnoremap <Space>g ggVG
 
 tnoremap <C-t> <C-w>N
 
-function! CheckBuftypeAndExecuteGFInTerminal()
-    if &buftype ==# 'terminal'
-        exec "normal! \<c-w>vgf\<c-w>l\<c-w>H\<c-w>l"
-        echo "1"
-    else
-        normal! gf
-        echo "2"
-    endif
-endfunction
+"function! CheckBuftypeAndExecuteGF()
+"    if &buftype ==# 'terminal'
+"        exec "normal! \<c-w>vgf\<c-w>l\<c-w>H\<c-w>l"
+"    else
+"        normal! gf
+"    endif
+"endfunction
 
-nnoremap gf :call CheckBuftypeAndExecuteGFInTerminal()<CR>
+"nnoremap gf :call CheckBuftypeAndExecuteGF()<CR>
+
+"function! CheckBuftypeAndExecuteGNF()
+    "if &buftype ==# 'terminal'
+        "exec "normal! \<c-w>vgf\<c-w>l\<c-w>H\<c-w>l"
+    "else
+        "normal! gf
+    "endif
+"endfunction
+
+nnoremap gvf <C-w>vgf<C-w>l<C-w>H<C-w>l
+nnoremap gsf <C-w>sgf<C-w>j<C-w>K<C-w>j
+nnoremap gtf <C-w>gf
+
+vnoremap gvf "ay:vsplit <C-r>a<CR><C-w>l<C-w>H<C-w>h
+vnoremap gsf "ay:split <C-r>a<CR><c-w>j<C-w>K<C-w>k
+vnoremap gtf "ay:tabnew <C-r>a<CR>
+
+nnoremap <C-q> <C-w>q
 
 vnoremap < <gv
 vnoremap > >gv
@@ -65,3 +81,12 @@ inoremap <C-j> <C-n>
 inoremap <C-k> <C-p>
 inoremap <C-f> <C-x><C-f>
 inoremap <C-g> a<BS><C-x><C-f>
+
+nnoremap <C-k> gt
+vnoremap <C-k> gt
+
+nnoremap <C-j> gT
+vnoremap <C-j> gT
+
+nnoremap <Space>t :tabnew<CR>
+vnoremap <Space>t :tabnew<CR>
