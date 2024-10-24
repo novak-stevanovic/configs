@@ -11,11 +11,16 @@ return {
 
         local opts = { noremap = true, silent = true }
 
+        On_attach_workspace = function(client, bufnr)
+            require("workspace-diagnostics").populate_workspace_diagnostics(client, bufnr)
+            On_attach(client, bufnr)
+        end
+
+
         On_attach = function (client, bufnr)
             -- opts.desc = "Show LSP references"
             -- vim.keymap.set("n", "gR", ":Telescope lsp_references<CR>", opts) -- show definition, references
             vim.keymap.set("n", "gR", function() require("trouble").toggle("lsp_references") end)
-
 
 
             opts.desc = "Go to definition"

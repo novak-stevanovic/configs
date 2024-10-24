@@ -2,13 +2,11 @@ Opts = { noremap = true, silent = true }
 Map = vim.api.nvim_set_keymap
 
 Map("i", "jk", "<Esc>", Opts)
+Map("n", "a", "<Esc>", Opts)
 
 Map("i", "<C-c>", "<Esc>", Opts)
 Map("n", "<C-c>", "<Esc>", Opts)
 Map("v", "<C-c>", "<Esc>", Opts)
-
-Map("v", ":", ":<C-f>i", Opts)
-Map("n", ":", ":<C-f>i", Opts)
 
 Map("n", "d_", "d^", Opts)
 Map("n", "y_", "y^", Opts)
@@ -25,11 +23,31 @@ Map("n", "gJ", "mzgJ`z", Opts)
 --SEARCH
 Map("n", "n", "nzzzv", Opts)
 Map("n", "N", "Nzzzv", Opts)
+Map("n", "*", "*N", Opts)
+Map("v", "*", "*N", Opts)
 Map("n", "<Leader>h", ":nohl<CR>", Opts)
 
---FILES
-Map("n", "<C-s>", "<C-w>w", Opts)
-Map("n", "<C-q>", "<C-w>q", Opts)
+--WINDOWS
+Map("n", "<S-UP>", ":split<CR><C-w><C-k>", Opts)
+Map("n", "<S-DOWN>", ":split<CR><C-W><DOWN>", Opts)
+Map("n", "<S-LEFT>", ":vsplit<CR><C-w><C-h>", Opts)
+Map("n", "<S-RIGHT>", ":vsplit<CR><C-W><RIGHT>", Opts)
+Map("n", "<C-q>", ":q<CR>", Opts)
+
+--TABS
+Map("n", "<Leader>nt", ":tabnew<CR>", Opts)
+Map("n", "<C-LEFT>", "gT", Opts)
+Map("n", "<C-RIGHT>", "gt", Opts)
+Map("n", "<C-UP>", ":tabmove +1<CR>", Opts)
+Map("n", "<C-DOWN>", ":tabmove -1<CR>", Opts)
+
+--AUTOCOMPLETE
+Map("i", "<C-f>", "<C-x><C-f", Opts)
+
+
+--TERMINAL
+Map("t", "<C-t>", "<C-\\><C-n>", Opts)
+Map("n", "<C-t>", ":term<CR>", Opts)
 
 --LSP
 -- vim.api.nvim_create_autocmd('LspAttach', {

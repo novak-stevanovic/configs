@@ -25,7 +25,6 @@ augroup Mkdir
   autocmd BufWritePre * call mkdir(expand("<afile>:p:h"), "p")
 augroup END
 
-
 nnoremap <C-c> <Esc>
 vnoremap <C-c> <Esc>
 inoremap <C-c> <Esc>

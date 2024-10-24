@@ -15,7 +15,7 @@ return {
                 "bashls",
                 "pyright",
                 "jdtls",
-                "tsserver",
+                "omnisharp",
                 "cmake"
             },
             auto_install = true,
@@ -26,6 +26,13 @@ return {
                         on_attach = On_attach
                     })
                 end,
+
+                ["clangd"] = function()
+                    require('lspconfig').clangd.setup({
+                        capabilities = require('cmp_nvim_lsp').default_capabilities(),
+                        on_attach = On_attach_workspace,
+                    })
+              end,
 
                 ["lua_ls"] = function()
                     require("lspconfig").lua_ls.setup({
@@ -56,7 +63,7 @@ return {
                         capabilities = require('cmp_nvim_lsp').default_capabilities(),
                     }
                 end,
-                ["jdtls"] = function() end
+                ["jdtls"] = function() end,
             }
 
         })
